@@ -9,26 +9,32 @@
 </head>
 
 <body>
+    <header>
+        <div class="navbar">
+            <img src="./job portal.png" alt="logo" class="nav-logo" />
+            <span class="nav-name">Internship Portal </span>
 
-    <div class="navbar">
-        <img src="./job portal.png" alt="logo" class="nav-logo" />
-        <span class="nav-name">Internship Portal </span>
-
-        <div class="menu">
-            <a href="#">Home</a>
-            <a href="#">Jobs</a>
-            <a href="#">Jobs Details</a>
-            <a href="#">Dashboard</a>
-            <a href="#">Post Job</a>
-            <a href="#">Register</a>
-            <a href="#">Login</a>
-            <div class="nav-clock">
-                <span id="dateSpan"></span>
-                <span id="timeSpan"></span>
+            <div class="menu">
+                <a href="#">Home</a>
+                <a href="#">Jobs</a>
+                <a href="#">Jobs Details</a>
+                <a href="#">Dashboard</a>
+                <a href="#">Post Job</a>
+                <a href="#">Register</a>
+                <a href="#">Login</a>
+                <div class="nav-clock">
+                    <span id="dateSpan"></span>
+                    <span id="timeSpan"></span>
+                </div>
+                <button id="themeToggle">🌙</button>
             </div>
-            <button id="themeToggle">🌙</button>
         </div>
-    </div>
+    </header>
+<div class="search-container">
+    <input type="text" id="jobSearch" placeholder="Search Job Title"  onkeyup="searchJobs()" class="search">
+
+     <input type="text" id="locationSearch" placeholder="Search Location"  onkeyup="searchJobs()" class="search">
+</div>
     <div class="container">
         <div class="card">
             <img src="./../images/Technova.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
@@ -44,7 +50,7 @@
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
 
         </div>
@@ -89,7 +95,7 @@
             <img src="./../images/codework.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
 
             <div class="sub-container">
-                <span class="job-title">Backtend Developer</span>
+                <span class="job-title">Backend Developer</span>
                 <br /><br />
                 <span class="name">Company: CodeWorks</span>
                 <br />
@@ -247,9 +253,7 @@
 
         <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
     </footer>
-
+    <script src="./../js/jobs.js"></script>
 </body>
 
 </html>
-</div>
-</div>
