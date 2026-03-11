@@ -129,5 +129,40 @@ location:"Mumbai",
 type:"Full Time",
 salary:"47000/month"
 }
-
 ]
+
+/* LOAD JOBS */
+
+function loadJobs(list = jobs){
+
+let container=document.getElementById("jobContainer")
+
+container.innerHTML=""
+
+list.forEach(function(job,index){
+
+container.innerHTML+=`
+
+<div class="job-card">
+
+<h3>${job.title}</h3>
+
+<p><b>Company:</b> ${job.company}</p>
+
+<p><b>Location:</b> ${job.location}</p>
+
+<p><b>Type:</b> ${job.type}</p>
+
+<p><b>salary:</b> ${job.salary}</p>
+
+<button onclick="showDetails(${index})">View Details</button>
+
+</div>
+
+`
+
+})
+
+}
+
+loadJobs([jobs[0],jobs[4],jobs[8],jobs[12]])
