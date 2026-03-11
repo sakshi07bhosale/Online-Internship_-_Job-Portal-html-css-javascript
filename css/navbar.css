@@ -1,0 +1,79 @@
+/* Navbar */
+
+.navbar{
+background:#2c3e50;
+color:white;
+padding:15px;
+display:flex;
+align-items:center;
+flex-wrap: wrap;
+position: fixed;
+top: 0%;
+width: 100%;
+}
+
+
+.nav-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #b1ceec;
+  
+}
+.nav-name {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+ margin-left: 12px;
+ margin-right: 40px;
+}
+
+
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-left: auto;
+  
+  
+}
+
+.menu a {
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  color: white
+ 
+}
+
+.menu a:hover {
+  color: yellow
+}
+
+
+
+.nav-clock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 14px;
+  font-size: 13px;
+  font-weight: 600;
+  color:white;
+  line-height: 1.3;
+  white-space: nowrap;
+}
+
+#dateSpan {
+  font-size: 13px;
+}
+
+#timeSpan {
+  font-size: 14px;
+  font-weight: 700;
+  color:white;
+}
+
+
