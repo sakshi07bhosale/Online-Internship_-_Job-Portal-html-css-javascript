@@ -166,3 +166,53 @@ container.innerHTML+=`
 }
 
 loadJobs([jobs[0],jobs[4],jobs[8],jobs[12]])
+
+/* SEARCH */
+
+function searchJob(){
+
+let title=document.getElementById("title").value.toLowerCase().trim()
+let location=document.getElementById("location").value.toLowerCase().trim()
+
+let filtered=jobs.filter(function(job){
+
+return job.title.toLowerCase().includes(title) &&
+job.location.toLowerCase().includes(location)
+
+})
+
+if(filtered.length===0){
+
+document.getElementById("jobContainer").innerHTML="<h3>No Jobs Found</h3>"
+
+}else{
+
+loadJobs(filtered)
+
+}
+
+}
+
+/* JOB DETAILS */
+
+function showDetails(index){
+
+let job=jobs[index]
+
+document.getElementById("jobDetails").style.display="block"
+
+document.getElementById("detailTitle").innerText=job.title
+document.getElementById("detailCompany").innerText="Company: "+job.company
+document.getElementById("detailLocation").innerText="Location: "+job.location
+document.getElementById("detailType").innerText="Job Type: "+job.type
+document.getElementById("detailSalary").innerText="Salary: "+job.salary
+
+window.scrollTo(0,document.body.scrollHeight)
+
+}
+
+function closeDetails(){
+
+document.getElementById("jobDetails").style.display="none"
+
+}
