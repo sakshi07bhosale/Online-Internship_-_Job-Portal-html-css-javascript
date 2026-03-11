@@ -76,4 +76,60 @@ width: 100%;
   color:white;
 }
 
+/* dark mode */
 
+body.dark{
+background:#121212;
+color:white;
+}
+
+body.dark .navbar{
+background:#1e1e1e;
+}
+
+
+body.dark .job-card{
+background:#2b2b2b;
+}
+
+body.dark .search-box{
+background:#2b2b2b;
+}
+
+body.dark .contact{
+background:#2b2b2b;
+}
+
+body.dark .message{
+background:#2b2b2b;
+}
+
+
+
+body.dark .footer-container{
+background:#2b2b2b;
+color:white;
+border: none;
+border-top: 1px solid #555;
+}
+
+body.dark .footer-message{
+background:#2b2b2b;
+color:white;
+}
+
+
+body.dark input{
+background:#333;
+color:white;
+border:1px solid #555;
+
+
+
+}
+.hamburger{
+  display: none;
+}
+.togglenavbar{
+  display: none;
+}
