@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./../css/jobs.css">
+    <title>Jobs Page</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <img src="./job portal.png" alt="logo" class="nav-logo" />
+            <span class="nav-name">Internship Portal </span>
+
+            <div class="menu">
+                <a href="./../index.html">Home</a>
+                <a href="./jobs.html">Jobs</a>
+                <a href="./job-details.html">Jobs Details</a>
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="./post-job.html" class="active">Post Job</a>
+                <a href="./register.html">Register</a>
+                <a href="./login.html">Login</a>
+                <div class="nav-clock">
+                    <span id="dateSpan"></span>
+                    <span id="timeSpan"></span>
+                </div>
+                <button id="themeToggle">🌙</button>
+            </div>
+        </div>
+    </header>
+    <div class="search-container">
+        <input type="text" id="jobSearch" placeholder="Search Job Title" onkeyup="searchJobs()" class="search">
+
+        <input type="text" id="locationSearch" placeholder="Search Location" onkeyup="searchJobs()" class="search">
+    </div>
+    <div class="container">
+        <div class="card">
+            <img src="./../images/Technova.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">Frontend Developer</span>
+                <br /><br />
+                <span class="name">Company: TechNova</span>
+                <br />
+                <span class="name">Location: Remote</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view" onclick="showjob()">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/techsoft.png" width="200px" style="margin: 20px 0px 40px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">Frontend Developer</span>
+                <br /><br />
+                <span class="name">Company: TechSoft</span>
+                <br />
+                <span class="name">Location: Mumbai</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/Codecraft2.png" width="180px" height="90px" style="margin: 10px 0px 20px 10px;"
+                class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">Backend Developer</span>
+                <br /><br />
+                <span class="name">Company: CodeCraft</span>
+                <br />
+                <span class="name">Location: Pune</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/codework.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">Backend Developer</span>
+                <br /><br />
+                <span class="name">Company: CodeWorks</span>
+                <br />
+                <span class="name">Location: Pune</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/pixellab.png" width="75px" style="margin: 20px 0px 30px 70px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">UI/UX Design </span>
+                <br /><br />
+                <span class="name">Company: PixeLab</span>
+                <br />
+                <span class="name">Location: Mumbai</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/creativelabs.png" width="200px" style="margin: 20px 0px 20px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">UI/UX Designer</span>
+                <br /><br />
+                <span class="name">Company: CreativeLab</span>
+                <br />
+                <span class="name">Location: Bengaluru</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/dataspere.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title">Data Analyst</span>
+                <br /><br />
+                <span class="name">Company: DataSphere</span>
+                <br />
+                <span class="name">Location: Remote</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/datacrop.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title"> Data Analyst</span>
+                <br /><br />
+                <span class="name">Company: DataCrop</span>
+                <br />
+                <span class="name">Location: Delhi</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="./../images/CapGemini.png" width="200px" height="90px" style="margin: 20px 0px 10px 10px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title"> Data Analyst</span>
+                <br /><br />
+                <span class="name">Company: CapGemini</span>
+                <br />
+                <span class="name">Location: Delhi</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+
+          <div class="card">
+            <img src="./../images/TCS.png" width="150px" height="80px" style="margin: 20px 0px 25px 40px;" class="image" />
+
+            <div class="sub-container">
+                <span class="job-title"> Data Analyst</span>
+                <br /><br />
+                <span class="name">Company: TCS</span>
+                <br />
+                <span class="name">Location: Delhi</span>
+                <br />
+                <span class="name"> Internship/Full-Time</span>
+                <br />
+                <span class="name">Posted Date : 8/3/2026</span>
+                <br /><br />
+                <button class="view">View Details</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <div>
+                    <img src="./job portal.png" alt="internship portal " height="70px"
+                        style="justify-content: center; margin-left: 40px; border-radius: 50%; border:2px solid white;" />
+                    <h1 class="footer-heading">Internship Portal</h1>
+                </div>
+                <p>
+                    InternHub is an online internship and job portal where students and
+                    professionals can find internships, full-time jobs and career opportunities.
+                </p>
+                </p>
+            </div>
+
+
+            <div class="footer-box">
+                <span class="quick-links" class="footer-heading">
+                    <img src="./link.jpg" />
+                    <h1 class="footer-heading">Quick Links</h1>
+                </span>
+                <ul>
+                    <li><a href="./../index.html">Home</a></li>
+                    <li><a href="./jobs.html">Jobs</a></li>
+                    <li><a href="./job-details.html">Jobs Details</a></li>
+                    <li><a href="./dashboard.html">Dashboard</a></li>
+                    <li><a href="./post-job.html">Post Job</a></li>
+                    <li><a href="./register.html">Register</a></li>
+                    <li><a href="./login.html">Login</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-box">
+                <span class="quick-links">
+                    <img src="./operator.jpg" style="margin-bottom: 20px;" />
+                    <h1 class="footer-heading">Contact Us / Help</h1>
+                </span>
+                <a href="mailto:internship-portal@gail.com"><img src="./gmail.png" alt="smart shop logo"
+                        class="footer-icon" /> internshipportal@gail.com</a><br><br>
+                <a href="tel:+1234567890"><img src="./phone-call.jpg" class="footer-icon" /> +1234567890</a>
+                <br><br>
+                <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank" class="footer-link">
+                    <img src="./location.jpg" alt="location icon" class="footer-icon" />
+                    <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
+                </a>
+
+            </div>
+
+            <div class="footer-box">
+                <span class="quick-links" style="padding-bottom: 10px;" class="footer-heading">
+                    <img src="./add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
+                    <h1 class="footer-heading">follow Us</h1><br>
+                </span>
+
+                <a href="https://www.facebook.com/" target="_blank"><img src="./facebook.jpg" alt="Facebook"
+                        class="footer-icon" />FaceBook</a><br><br>
+                <a href=target="_blank"><img src="./instagram.jpg" alt="Instagram"
+                        class="footer-icon" />Instagram</a><br><br>
+                <a href="https://x.com/home" target="_blank"><img src="./twitter.jpg" alt="Twitter"
+                        class="footer-icon" />Twitter</a><br><br>
+            </div>
+
+        </div>
+
+        <hr>
+        <hr>
+
+        <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
+    </footer>
+    <script src="./../js/jobs.js"></script>
+</body>
+
+</html>
