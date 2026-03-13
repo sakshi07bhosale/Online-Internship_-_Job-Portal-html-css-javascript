@@ -92,12 +92,22 @@ body.dark .job-card{
 background:#2b2b2b;
 }
 
+body.dark #jobDetails{
+background:#2b2b2b; 
+color:white; 
+}
+
+body.dark #detailsCard{
+background:#0c000a; 
+color:white; }
+
 body.dark .search-box{
 background:#2b2b2b;
 }
 
 body.dark .contact{
 background:#2b2b2b;
+
 }
 
 body.dark .message{
