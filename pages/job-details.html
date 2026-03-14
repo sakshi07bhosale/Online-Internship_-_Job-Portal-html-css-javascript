@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Job Details</title>
+<link rel="stylesheet" href="./../css/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+  <header>
+  
+<div class="navbar">
+    <img src="./../images/job portal.png"class="nav-logo">
+<span class="nav-name">Internship-Portal </span>
+
+<div class="menu">
+<a href="./../home.html">Home</a>
+<a href="./../pages/jobs.html">Jobs</a>
+<a href="./../pages/job-details.html">Jobs-Details</a>
+<a href="./../pages/dashboard.html">Dashboard</a>
+<a href="./../pages/post-job.html">Post-Job</a>
+<a href="./../pages/login.html">Login</a>
+ <div class="nav-clock">
+        <span id="dateSpan"></span>
+        <span id="timeSpan"></span>
+      </div>
+<button id="toggleBtn" class="toggle-btn">🌙</button>      
+</div>
+</div>
+ </header>
+    </nav>
+
+<div class="job-details">
+
+<h1>Web Developer</h1>
+
+<img src="./../images/job portal.png" class="logo">
+
+
+
+
+</div>
+
+
+
+
+<h3>Company: Tech Solutions</h3>
+
+<p><b>Location:</b> Pune</p>
+
+<p><b>Salary:</b> ₹4 - ₹6 LPA</p>
+
+<p><b>Job Type:</b> Full Time</p>
+
+<p><b>Experience Required:</b> 0 - 2 Years</p>
+
+<p><b>Required Skills:</b> HTML, CSS, JavaScript, React</p>
+
+<p><b>Last Date to Apply:</b> 30 June 2026</p>
+
+<h3>Job Description</h3>
+<p>
+We are looking for a passionate Web Developer to build modern web applications.
+The candidate should have good knowledge of front-end technologies and teamwork skills.
+</p>
+
+<h2 class="title">Available Jobs</h2>
+
+<div class="job-container">
+
+
+<div class="job-card">
+<h3>Frontend Developer</h3>
+<p>Company: Capgemini</p>
+<p>Location: Remote</p>
+
+<a href="job-details.html">
+<button>View Details</button>
+</a>
+
+</div>
+
+
+<div class="job-card">
+<h3>Backend Developer</h3>
+<p>Company: TCS</p>
+<p>Location: Banglore</p>
+
+<a href="job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+
+<div class="job-card">
+<h3>UI/UX Intern</h3>
+<p>Company: WIPRO</p>
+<p>Location: Mumbai</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+
+<div class="job-card">
+<h3>Data Analyst</h3>
+<p>Company: COGNIZANT</p>
+<p>Location: Remote</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+
+<div class="job-card">
+<h3>Frontend Developer</h3>
+<p>Company: IBM</p>
+<p>Location: Mumbai</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+
+<div class="job-card">
+  <h3>CodeWorks</h3>
+<p>Company: Tech Mahindra Americas</p>
+<p>Location: Remote</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+
+</div>
+
+
+<div class="job-card">
+<h3>Data Analyst</h3>
+<p>Company: HCLTech</p>
+<p>Location: Banglore</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+
+<div class="job-card">
+<h3>Data Analyst</h3>
+<p>Company: Oracle India</p>
+<p>Location: Delhi</p>
+
+<a href="./../pages/job-details.html">
+<button>View Details</button>
+</a>
+</div>
+
+<div class="apply-section">
+  <button class="apply-btn" onclick="generatePDF()">Apply Now</button>
+<p id="msg">
+
+</div>
+
+
+
+
+
+<script>
+
+function viewDetails(job){
+
+if(job === "frontend"){
+window.location.href="job-details.html";
+}
+
+else if(job === "backend"){
+window.location.href="backend.html";
+}
+
+else if(job === "uiux"){
+window.location.href="uiux.html";
+}
+
+else if(job === "data"){
+window.location.href="data.html";
+}
+
+}
+</script>
+<script>
+function generatePDF() {
+
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();
+
+// Current Date & Time
+let now = new Date();
+let date = now.toLocaleDateString();
+let time = now.toLocaleTimeString();
+
+doc.setFontSize(16);
+doc.text("Job Application Details", 20, 20);
+
+doc.setFontSize(12);
+doc.text("Job Title: Web Developer", 20, 40);
+doc.text("Company: Tech Solutions", 20, 50);
+doc.text("Location: Pune", 20, 60);
+doc.text("Salary: 4 - 6 LPA", 20, 70);
+
+doc.text("Application Date: " + date, 20, 90);
+doc.text("Application Time: " + time, 20, 100);
+
+doc.save("Job_Application.pdf");
+
+
+document.getElementById("msg").innerHTML="Application Submitted Successfully";
+
+}
+</script>
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-box">
+
+                <img src="./../images/job portal.png" alt="internship portal" height="70px"
+                    style="margin-left:40px;border-radius:50%;border:2px solid white;" />
+
+                <h1 class="footer-heading">Internship Portal</h1>
+
+                <p>
+                    InternHub is an online internship and job portal where students and
+                    professionals can find internships, full-time jobs and career opportunities.
+                </p>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h1 class="footer-heading">Quick Links</h1>
+
+                <ul>
+                    <li><a href="./../index.html">Home</a></li>
+                    <li><a href="./../pages/jobs.html">Jobs</a></li>
+<li><a href="./../pages/job-details.html"class="active">job-details</a></li>
+<li><a href="./../pages/dashboard.html">Dashboard</a></li>
+<li><a href="./../pages/post-job.html">Post Job</a></li>
+                    <li><a href="./../pages/login.html">Login</a></li>
+                </ul>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h1 class="footer-heading">Contact Us / Help</h1>
+
+                <a href="mailto:internshipportal@gail.com">
+                    <img src="./../images/mail.png" class="footer-icon" />
+                    internshipportal@gail.com
+                </a>
+
+                <br><br>
+
+                <a href="tel:+1234567890">
+                    <img src="./../images/call.png" class="footer-icon" />
+                    +1234567890
+                </a>
+
+                <br><br>
+
+                <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank">
+
+                    <img src="./../images/location.png" class="footer-icon" />
+
+                    <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
+
+                </a>
+
+            </div>
+
+
+            <div class="footer-box">
+
+                <h1 class="footer-heading">Follow Us</h1>
+
+                <a href="https://www.facebook.com/" target="_blank">
+                    <img src="./../images/facebook.png" class="footer-icon" /> Facebook
+                </a>
+
+                <br><br>
+
+                <a href="https://www.instagram.com/" target="_blank">
+                    <img src="./../images/instagram.png" class="footer-icon" /> Instagram
+                </a>
+
+                <br><br>
+
+                <a href="https://x.com/home" target="_blank">
+                    <img src="./../images/twitter.png" class="footer-icon" /> Twitter
+                </a>
+
+            </div>
+
+        </div>
+
+        <hr>
+        <hr>
+
+        <p  style="text-align:center;margin-top:20px;">
+            © 2026 internship-portal. All rights reserved.
+        </p>
+
+
+    </footer>
+
+
+
+<script src="./../js/script.js"></script>
+    
+
+
+<script>
+document.getElementById("toggleBtn").addEventListener("click", function () {
+document.body.classList.toggle("dark");
+});
+</script>
+</body>
+
+</html>
