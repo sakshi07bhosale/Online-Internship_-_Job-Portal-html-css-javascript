@@ -4,33 +4,40 @@
 <head>
     <title>Post Job</title>
     <link rel="stylesheet" href="./../css/post-job.css">
-    <script src="./../js/post-job.js" defer></script>
+    <link rel="stylesheet" href="./../css/navbar.css">
+    <link rel="stylesheet" href="./../css/footer.css">
 </head>
 
 <body>
 
     <header>
-        <div class="navbar">
-            <img src="./job portal.png" alt="logo" class="nav-logo" />
-            <span class="nav-name">Internship Portal </span>
+         <div class="navbar">
+        <img src="./../images/job portal.png" alt="logo" class="nav-logo" />
+        <span class="nav-name">Internship-Portal </span>
 
-            <div class="menu">
-                <a href="./../index.html">Home</a>
-                <a href="./jobs.html">Jobs</a>
-                <a href="./job-details.html">Jobs Details</a>
-                <a href="./dashboard.html">Dashboard</a>
-                <a href="./post-job.html" class="active">Post Job</a>
-                <a href="./register.html">Register</a>
-                <a href="./login.html">Login</a>
-                <div class="nav-clock">
-                    <span id="dateSpan"></span>
-                    <span id="timeSpan"></span>
-                </div>
-                <button id="themeToggle">🌙</button>
-
-
+        <div class="menu">
+            <a href="./../index.html">Home</a>
+            <a href="./jobs.html">Jobs</a>
+            <a href="./job-details.html">Jobs-Details</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./post-job.html" class="active">Post-Job</a>
+            <a href="./login.html">Login</a>
+            <div class="nav-clock">
+                <span id="dateSpan"></span>
+                <span id="timeSpan"></span>
             </div>
+            <button id="themeToggle">🌙</button>
         </div>
+        <span onclick="showNavbar()"><img src="./images/arrow.png" class="hamburger"></span>
+    </div>
+    <div class="togglenavbar" id="togglenavbar">
+        <a href="./index.html">Home</a>
+        <a href="./pages/jobs.html">Jobs</a>
+        <a href="./pages/job-details.html">Jobs-Details</a>
+        <a href="./pages/dashboard.html">Dashboard</a>
+        <a href="./pages/post-job.html">Post-Job</a>
+        <a href="./pages/login.html">Login</a>
+    </div>
     </header>
 
     <div class="container">
@@ -67,7 +74,7 @@
 
             <div class="footer-box">
                 <div>
-                    <img src="./job portal.png" alt="internship portal " height="70px"
+                    <img src="./../images/job-portal.png" alt="internship portal " height="70px"
                         style="justify-content: center; margin-left: 40px; border-radius: 50%; border:2px solid white;" />
                     <h1 class="footer-heading">Internship Portal</h1>
                 </div>
@@ -81,31 +88,30 @@
 
             <div class="footer-box">
                 <span class="quick-links" class="footer-heading">
-                    <img src="./link.jpg" />
+                    <img src="./../images/link.jpg" />
                     <h1 class="footer-heading">Quick Links</h1>
                 </span>
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Jobs Details</a></li>
-                    <li><a href="#">Dashboard</a></li>
-                    <li><a href="#">Post Job</a></li>
-                    <li><a href="#">Register</a></li>
-                    <li><a href="#">Login</a></li>
+                    <li><a href="./../index.html">Home</a></li>
+                    <li><a href="./../pages/jobs.html">Jobs</a></li>
+                    <li><a href="../pages/job-details.html">Jobs Details</a></li>
+                    <li><a href="../pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="../pages/post-job.html">Post Job</a></li>
+                    <li><a href="./../pages/login.html">Login</a></li>
                 </ul>
             </div>
 
 
             <div class="footer-box">
                 <span class="quick-links">
-                    <img src="./operator.jpg" style="margin-bottom: 20px;" />
+                    <img src="./../images/operator.jpg" style="margin-bottom: 20px;" />
                     <h1 class="footer-heading">Contact Us / Help</h1>
                 </span>
-                <a href="mailto:internship-portal@gail.com"><img src="./gmail.png" alt="smart shop logo"
+                <a href="mailto:internship-portal@gail.com"><img src="./../images/mail.png" alt="smart shop logo"
                         class="footer-icon" /> internshipportal@gail.com</a><br><br>
-                <a href="tel:+1234567890"><img src="./phone-call.jpg" class="footer-icon" /> +1234567890</a> <br><br>
+                <a href="tel:+1234567890"><img src="../images/phone-call.jpg" class="footer-icon" /> +1234567890</a> <br><br>
                 <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank" class="footer-link">
-                    <img src="./location.jpg" alt="location icon" class="footer-icon" />
+                    <img src="../images/location.jpg" alt="location icon" class="footer-icon" />
                     <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
                 </a>
 
@@ -113,15 +119,15 @@
 
             <div class="footer-box">
                 <span class="quick-links" style="padding-bottom: 10px;" class="footer-heading">
-                    <img src="./add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
+                    <img src="./../images/add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
                     <h1 class="footer-heading">follow Us</h1><br>
                 </span>
 
-                <a href="https://www.facebook.com/" target="_blank"><img src="./facebook.jpg" alt="Facebook"
+                <a href="https://www.facebook.com/" target="_blank"><img src="./../images/facebook.jpg" alt="Facebook"
                         class="footer-icon" />FaceBook</a><br><br>
-                <a href=target="_blank"><img src="./instagram.jpg" alt="Instagram"
+                <a href=target="_blank"><img src="../images/instagram.png" alt="Instagram"
                         class="footer-icon" />Instagram</a><br><br>
-                <a href="https://x.com/home" target="_blank"><img src="./twitter.jpg" alt="Twitter"
+                <a href="https://x.com/home" target="_blank"><img src="./../images/twitter.jpg" alt="Twitter"
                         class="footer-icon" />Twitter</a><br><br>
             </div>
 
@@ -133,6 +139,9 @@
         <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
     </footer>
 
+    <script src="../js/navbar.js" defer></script>
+    
+    <script src="./../js/post-job.js" defer></script>
 </body>
 
 </html>
