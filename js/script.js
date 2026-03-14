@@ -69,8 +69,17 @@ link.download = "job_application.pdf";
 link.click();
 
 }
-const btn = document.getElementById("themeToggle");
+const toggleBtn = document.getElementById("themeToggle");
 
-btn.onclick = function(){
-document.body.classList.toggle("dark");
+toggleBtn.onclick = function () {
+
+    document.body.classList.toggle("dark");
+
+    if(document.body.classList.contains("dark")){
+        toggleBtn.innerHTML = "☀️";
+    }
+    else{
+        toggleBtn.innerHTML = "🌙";
+    }
 }
+
