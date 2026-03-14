@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Post Job</title>
+    <link rel="stylesheet" href="./../css/post-job.css">
+    <script src="./../js/post-job.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <div class="navbar">
+            <img src="./job portal.png" alt="logo" class="nav-logo" />
+            <span class="nav-name">Internship Portal </span>
+
+            <div class="menu">
+                <a href="./../index.html">Home</a>
+                <a href="./jobs.html">Jobs</a>
+                <a href="./job-details.html">Jobs Details</a>
+                <a href="./dashboard.html">Dashboard</a>
+                <a href="./post-job.html" class="active">Post Job</a>
+                <a href="./register.html">Register</a>
+                <a href="./login.html">Login</a>
+                <div class="nav-clock">
+                    <span id="dateSpan"></span>
+                    <span id="timeSpan"></span>
+                </div>
+                <button id="themeToggle">🌙</button>
+
+
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <h1>Post a Job / Internship</h1>
+        <input type="text" id="title" placeholder="Job Title">
+        <input type="text" id="location" placeholder="Location">
+        <select id="type">
+            <option>Internship</option>
+            <option>Full-Time</option>
+            <option>Part-Time</option>
+        </select>
+        <textarea id="description" placeholder="Job Description"></textarea>
+        <button onclick="postJob()">Post Job</button>
+
+    </div>
+
+    <!-- =====img gallary==== -->
+    <H1 style="text-align: center;">OUR CONNECTIONS</H1>
+    <div class="gallery-container">
+        <span class="btn-slide btn-left" onclick="slideLeft()">&lt;</span>
+        <img src="./../images/1.jpg" alt="image1" class="main-img" id="mainImage">
+        <span class=" btn-slide btn-right" onclick="slideRight()">&gt;</span>
+    </div>
+    <h3 id="companyTitle">CapGemini</h3>
+    <a href="https://share.google/MB9yS80BxLkRE9Mca" id="companyAddress" target="_blank">
+        Address: Yosemite - Block A, Capgemini SEZ</a>
+    <div class="gallery-preview" id="gallery-preview">
+    </div>
+
+    <!-- ===footer==== -->
+    <footer>
+        <div class="footer-container">
+
+            <div class="footer-box">
+                <div>
+                    <img src="./job portal.png" alt="internship portal " height="70px"
+                        style="justify-content: center; margin-left: 40px; border-radius: 50%; border:2px solid white;" />
+                    <h1 class="footer-heading">Internship Portal</h1>
+                </div>
+                <p>
+                    InternHub is an online internship and job portal where students and
+                    professionals can find internships, full-time jobs and career opportunities.
+                </p>
+                </p>
+            </div>
+
+
+            <div class="footer-box">
+                <span class="quick-links" class="footer-heading">
+                    <img src="./link.jpg" />
+                    <h1 class="footer-heading">Quick Links</h1>
+                </span>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Jobs</a></li>
+                    <li><a href="#">Jobs Details</a></li>
+                    <li><a href="#">Dashboard</a></li>
+                    <li><a href="#">Post Job</a></li>
+                    <li><a href="#">Register</a></li>
+                    <li><a href="#">Login</a></li>
+                </ul>
+            </div>
+
+
+            <div class="footer-box">
+                <span class="quick-links">
+                    <img src="./operator.jpg" style="margin-bottom: 20px;" />
+                    <h1 class="footer-heading">Contact Us / Help</h1>
+                </span>
+                <a href="mailto:internship-portal@gail.com"><img src="./gmail.png" alt="smart shop logo"
+                        class="footer-icon" /> internshipportal@gail.com</a><br><br>
+                <a href="tel:+1234567890"><img src="./phone-call.jpg" class="footer-icon" /> +1234567890</a> <br><br>
+                <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank" class="footer-link">
+                    <img src="./location.jpg" alt="location icon" class="footer-icon" />
+                    <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
+                </a>
+
+            </div>
+
+            <div class="footer-box">
+                <span class="quick-links" style="padding-bottom: 10px;" class="footer-heading">
+                    <img src="./add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
+                    <h1 class="footer-heading">follow Us</h1><br>
+                </span>
+
+                <a href="https://www.facebook.com/" target="_blank"><img src="./facebook.jpg" alt="Facebook"
+                        class="footer-icon" />FaceBook</a><br><br>
+                <a href=target="_blank"><img src="./instagram.jpg" alt="Instagram"
+                        class="footer-icon" />Instagram</a><br><br>
+                <a href="https://x.com/home" target="_blank"><img src="./twitter.jpg" alt="Twitter"
+                        class="footer-icon" />Twitter</a><br><br>
+            </div>
+
+        </div>
+
+        <hr>
+        <hr>
+
+        <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>
