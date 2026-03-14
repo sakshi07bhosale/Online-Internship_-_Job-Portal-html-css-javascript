@@ -69,3 +69,8 @@ link.download = "job_application.pdf";
 link.click();
 
 }
+const btn = document.getElementById("themeToggle");
+
+btn.onclick = function(){
+document.body.classList.toggle("dark");
+}
