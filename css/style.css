@@ -296,10 +296,23 @@ background:white;
 padding:30px;
 border-radius:10px;
 box-shadow:0 4px 10px rgba(0,0,0,0.2);
+text-align: center;
 }
 
 .job-details h1{
 color:#0077b6;
+}
+.center-text{
+text-align:center;
+}
+
+.job-details{
+text-align:center;
+}
+
+.job-details h3,
+.job-details p{
+text-align:center;
 }
 
 .logo{
