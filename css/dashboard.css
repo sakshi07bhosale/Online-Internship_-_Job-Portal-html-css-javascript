@@ -1,8 +1,4 @@
 
-
-
-/* Navbar */
-
 .navbar{
 background:#2c3e50;
 color:white;
@@ -77,7 +73,6 @@ align-items:center;
 
 
 
-/* Dark Mode */
 
 .dark-mode{
 background-color:#121212;
@@ -95,16 +90,15 @@ color:white;
 .dark-mode .menu a:hover{
 color:yellow;
 }
-/* ===================== GENERAL DASHBOARD ===================== */
+
 .dashboard-main {
     padding: 40px;
     background: linear-gradient(to bottom, #f0f4ff, #dbeafe);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 80vh;
-    transition: background 0.5s ease;
+
 }
 
-/* ===================== SEARCH ===================== */
 .search-box {
     display: flex;
     flex-wrap: wrap;
@@ -150,7 +144,6 @@ color:yellow;
     background: linear-gradient(135deg, #1e40af, #2563eb);
 }
 
-/* ===================== STATS SECTION ===================== */
 .stats-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -214,7 +207,7 @@ color:yellow;
     z-index: 1;
 }
 
-/* ===================== JOB SECTION ===================== */
+
 .job-section h2 {
     margin-bottom: 32px;
     font-size: 30px;
@@ -239,7 +232,7 @@ color:yellow;
     gap: 28px;
 }
 
-/* ===================== JOB CARDS ===================== */
+
 .job-card {
     background: rgba(255, 255, 255, 0.92);
     backdrop-filter: blur(16px);
@@ -271,7 +264,7 @@ color:yellow;
     margin-bottom: 12px;
 }
 
-/* ===================== JOB CARD BUTTONS ===================== */
+
 .job-card button {
     margin-top: 12px;
     padding: 12px 22px;
@@ -302,7 +295,6 @@ color:yellow;
     box-shadow: 0 10px 22px rgba(255, 69, 103, 0.45);
 }
 
-/* ===================== DARK MODE ===================== */
 body.dark {
     background: linear-gradient(to bottom, #0f1115, #1a1a2e);
     color: #e0e0e0;
@@ -335,7 +327,7 @@ body.dark .job-card button:hover {
     background: linear-gradient(135deg, #3570b2, #4f9eff);
 }
 
-/* ===================== RANDOM HIGHLIGHT ===================== */
+
 .job-card.random-highlight {
     border: 2px solid #2563eb;
     animation: pulse 1.5s infinite alternate;
@@ -347,7 +339,7 @@ body.dark .job-card button:hover {
     100% { box-shadow: 0 0 26px #2563eb; }
 }
 
-/* ===================== RESPONSIVE ===================== */
+
 @media (max-width: 768px) {
     .search-box { flex-direction: column; gap: 10px; }
     .job-section h2 { font-size: 26px; }
@@ -444,5 +436,71 @@ footer {
     border-radius: 30%;
     border: 1px solid white;
 
+
+}
+
+
+.active{
+  background-color:#f1c40f;
+  color:black !important;
+  padding:6px 10px;
+  border-radius:5px;
+}
+
+
+/* Mobile Responsive */
+@media screen and (max-width:768px){
+
+.navbar{
+flex-direction:column;
+align-items:flex-start;
+}
+
+.menu{
+flex-direction:column;
+width:100%;
+}
+
+.menu a{
+display:block;
+padding:10px;
+width:100%;
+}
+
+.active{
+background-color:#f1c40f;
+color:black !important;
+display:block;
+text-align:center;
+}
+
+.nav-logo{
+width:50px;
+}
+
+.dashboard-main{
+padding:10px;
+}
+
+.stats-container{
+display:grid;
+grid-template-columns:1fr;
+gap:15px;
+}
+
+.job-list{
+display:grid;
+grid-template-columns:1fr;
+}
+
+.search-box{
+flex-direction:column;
+gap:10px;
+}
+
+.footer-container{
+flex-direction:column;
+text-align:center;
+}
 
 }

@@ -7,22 +7,22 @@
     <title>Dashboard</title>
 
     <link rel="stylesheet" href="./../css/dashboard.css">
+       <link rel="stylesheet" href="./../css/footer.css">
 
 </head>
 
 <body>
     <header>
       <div class="navbar">
-<img src="./../images/logo.jpg" alt="logo" class="nav-logo"/>
+<img src="./../images/job portal.png" alt="logo" class="nav-logo"/>
 <span class="nav-name">Internship-Portal </span>
 
 <div class="menu">
 <a href="./../index.html">Home</a>
 <a href="./jobs.html">Jobs</a>
 <a href="./job-details.html">Jobs-Details</a>
-<a href="./dashboard.html">Dashboard</a>
+<a href="./dashboard.html" class="active">Dashboard</a>
 <a href="./post-job.html">Post-Job</a>
-<a href="./register.html">Register</a>
 <a href="./login.html">Login</a>
  <div class="nav-clock">
         <span id="dateSpan"></span>
@@ -76,19 +76,14 @@
 
 
         <div class="job-section">
-
             <h2>Recommended Jobs & Internships</h2>
-
             <div class="job-list" id="jobList">
-
                 <div class="job-card" data-type="Internship">
                     <h3>Frontend Developer Intern</h3>
                     <p>Company: TechNova</p>
                     <p>Location: Remote</p>
-                   
                     <button onclick="goToJobDetails(this)">Apply</button>
                 </div>
-
                 <div class="job-card" data-type="Full Time">
                     <h3>Backend Developer</h3>
                     <p>Company: CodeCraft</p>
@@ -96,7 +91,6 @@
                     <br/>
                     <button onclick="goToJobDetails(this)">Apply</button>
                 </div>
-
                 <div class="job-card" data-type="Internship">
                     <h3>UI/UX Design Intern</h3>
                     <p>Company: PixelLab</p>
@@ -104,7 +98,6 @@
                     <br/>
                     <button onclick="goToJobDetails(this)">Apply</button>
                 </div>
-
                 <div class="job-card" data-type="Remote">
                     <h3>Data Analyst</h3>
                     <p>Company: DataSphere</p>
@@ -112,7 +105,6 @@
                     <br/>
                     <button onclick="goToJobDetails(this)">Apply</button>
                 </div>
-
                 <div class="job-card" data-type="Full Time">
                     <h3>Frontend Developer</h3>
                     <p>Company: TechSoft</p>
@@ -120,7 +112,6 @@
                     <br/>
                     <button onclick="goToJobDetails(this)">Apply</button>
                 </div>
-
                 <div class="job-card" data-type="Full Time">
                     <h3>Backend Developer</h3>
                     <p>Company: CodeWorks</p>
@@ -159,7 +150,6 @@ navbar.style.display = "none";
 else{
 navbar.style.display = "block";
 }
-
 }
         function searchJobs() {
             let keyword = document.getElementById("jobSearch").value.toLowerCase();
@@ -176,9 +166,7 @@ navbar.style.display = "block";
                 } else {
                     job.style.display = "none";
                 }
-
             });
-
         }
         function goToJobDetails(button) {
             let card = button.parentElement;
@@ -209,11 +197,8 @@ navbar.style.display = "block";
             updateCounter();
         });
         const toggleBtn = document.getElementById("themeToggle");
-
 toggleBtn.addEventListener("click", function () {
-
 document.body.classList.toggle("dark-mode");
-
 if(document.body.classList.contains("dark-mode")){
 toggleBtn.innerHTML = "☀️";
 }
@@ -223,12 +208,12 @@ toggleBtn.innerHTML = "🌙";
 
 });
     </script>
-
-    <footer>
+ <footer>
         <div class="footer-container">
+
             <div class="footer-box">
                 <div>
-                    <img src="./../images/logo.jpg" alt="internship portal " height="70px"
+                    <img src="./../images/job-portal.png" alt="internship portal " height="70px"
                         style="justify-content: center; margin-left: 40px; border-radius: 50%; border:2px solid white;" />
                     <h1 class="footer-heading">Internship Portal</h1>
                 </div>
@@ -238,60 +223,60 @@ toggleBtn.innerHTML = "🌙";
                 </p>
                 </p>
             </div>
+
             <div class="footer-box">
                 <span class="quick-links" class="footer-heading">
-                    <img src="./link.jpg" />
+                    <img src="./../images/link.jpg" />
                     <h1 class="footer-heading">Quick Links</h1>
                 </span>
                 <ul>
                     <li><a href="./../index.html">Home</a></li>
-                    <li><a href="./jobs.html">Jobs</a></li>
-                    <li><a href="./job-details.html">Jobs Details</a></li>
-                    <li><a href="./dashboard.html">Dashboard</a></li>
-                    <li><a href="./post-job.html">Post Job</a></li>
-                    <li><a href="./register.html">Register</a></li>
-                    <li><a href="./login.html">Login</a></li>
+                    <li><a href="./../pages/jobs.html">Jobs</a></li>
+                    <li><a href="./../pages/job-details.html">Jobs Details</a></li>
+                    <li><a href="./../pages/dashboard.html">Dashboard</a></li>
+                    <li><a href="./../pages/post-job.html">Post Job</a></li>
+                    <li><a href="./../pages/login.html">Login</a></li>
                 </ul>
             </div>
 
 
             <div class="footer-box">
                 <span class="quick-links">
-                    <img src="./operator.jpg" style="margin-bottom: 20px;" />
+                    <img src="./../images/operator.jpg" style="margin-bottom: 20px;" />
                     <h1 class="footer-heading">Contact Us / Help</h1>
                 </span>
-                <a href="mailto:internship-portal@gail.com"><img src="./../images/gmail.png" alt="smart shop logo"
-                        class="footer-icon" /> internshipportal@gail.com</a><br><br>
-                <a href="tel:+1234567890"><img src="./../images/call.png" class="footer-icon" /> +1234567890</a>
+                <a href="mailto:internship-portal@gail.com"><img src="./../images/gmail.png" class="footer-icon" /> <span
+                        class="gmail">internship-portal@gmail.com</span></a><br><br>
+                <a href="tel:+1234567890"><img src="./../images/phone-call.jpg" class="footer-icon" /> +1234567890</a>
                 <br><br>
                 <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank" class="footer-link">
-                    <img src="./../images/map.png" alt="location icon" class="footer-icon" />
-                    <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
+                    <img src="./../images/location.jpg" alt="location icon" class="footer-icon" />
+                    <span> Trinity Tower,ST Colony, Nashik, Maharashtra 422013</span>
                 </a>
 
             </div>
 
             <div class="footer-box">
                 <span class="quick-links" style="padding-bottom: 10px;" class="footer-heading">
-                    <img src="./add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
+                    <img src="./../images/add-friend.jpg" style="margin-bottom: 20px; border: 1px solid white;" />
                     <h1 class="footer-heading">follow Us</h1><br>
                 </span>
 
-                <a href="https://www.facebook.com/" target="_blank"><img src="./../images/facebook.png" alt="Facebook"
+                <a href="https://www.facebook.com/" target="_blank"><img src="./../images/facebook.jpg" alt="Facebook"
                         class="footer-icon" />FaceBook</a><br><br>
-                <a href=target="_blank"><img src="./../images/instagram.png" alt="Instagram"
+                <a href="https://www.instagram.com/internshipportal/" target="_blank"><img src="./../images/instagram.png" alt="Instagram"
                         class="footer-icon" />Instagram</a><br><br>
-                <a href="https://x.com/home" target="_blank"><img src="./../images/Twitter.png" alt="Twitter"
+                <a href="https://x.com/home" target="_blank"><img src="./../images/twitter.jpg" alt="Twitter"
                         class="footer-icon" />Twitter</a><br><br>
             </div>
-
+        </div>
+        <hr>
+        <div class="footer-message">
+            <p> 2026 internship-portal. All rights reserved.</p>
         </div>
 
-        <hr>
-        <hr>
-
-        <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
     </footer>
+ 
 </body>
 
 </html>
