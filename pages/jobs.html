@@ -23,7 +23,6 @@
                 <a href="./job-details.html">Jobs-Details</a>
                 <a href="./dashboard.html">Dashboard</a>
                 <a href="./post-job.html">Post-Job</a>
-                <a href="./register.html">Register</a>
                 <a href="./login.html">Login</a>
                 <div class="nav-clock">
                     <span id="dateSpan"></span>
@@ -31,14 +30,40 @@
                 </div>
                 <button id="themeToggle">🌙</button>
             </div>
+            <span onclick="showNavbar()"><img src="./../images/arrow.png" class="hamburger"></span>
+        </div>
+        <div class="togglenavbar" id="togglenavbar">
+            <a href="./../index.html">Home</a>
+            <a href="./jobs.html">Jobs</a>
+            <a href="./job-details.html">Jobs-Details</a>
+            <a href="./dashboard.html">Dashboard</a>
+            <a href="./post-job.html">Post-Job</a>
+            <a href="./login.html">Login</a>
         </div>
     </header>
 
     <div class="search-container">
-        <input type="text" id="jobSearch" placeholder="Search Job Title" onkeyup="searchJobs()" class="search">
+        <select id="jobSearch" class="search">
+            <option value="">Search Job Title</option>
+            <option value="Frontend Developer">Frontend Developer</option>
+            <option value="Backend Developer">Backend Developer</option>
+            <option value="UI/UX Designer">UI/UX Designer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Software Developer">Software Developer</option>
+        </select>
 
-        <input type="text" id="locationSearch" placeholder="Search Location" onkeyup="searchJobs()" class="search">
+        <select id="locationSearch" class="search">
+            <option value="">Search Locations</option>
+            <option value="Remote">Remote</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Pune">Pune</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+        </select>
+
+        <button onclick="searchJobs()" class="search-btn">Search</button>
     </div>
+
     <div class="container">
         <div class="card">
             <img src="./../images/Technova.png" width="200px" style="margin: 20px 0px 30px 10px;" class="image" />
@@ -50,7 +75,7 @@
                 <br />
                 <span class="name">Location: Remote</span>
                 <br />
-                <span class="name"> Internship/Full-Time</span>
+                <span class="name">Type: Internship</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
@@ -68,11 +93,11 @@
                 <br />
                 <span class="name">Location: Mumbai</span>
                 <br />
-                <span class="name"> Internship/Full-Time</span>
+                <span class="name"> Type: Part-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -87,11 +112,11 @@
                 <br />
                 <span class="name">Location: Pune</span>
                 <br />
-                <span class="name"> Internship/Full-Time</span>
+                <span class="name">Type: Remote</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -105,11 +130,11 @@
                 <br />
                 <span class="name">Location: Pune</span>
                 <br />
-                <span class="name"> Internship/Full-Time</span>
+                <span class="name">Type: Full-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -117,17 +142,17 @@
             <img src="./../images/pixellab.png" width="75px" style="margin: 20px 0px 30px 70px;" class="image" />
 
             <div class="sub-container">
-                <span class="job-title">UI/UX Design </span>
+                <span class="job-title">UI/UX Designer </span>
                 <br /><br />
                 <span class="name">Company: PixeLab</span>
                 <br />
                 <span class="name">Location: Mumbai</span>
                 <br />
-                <span class="name"> Internship/Full-Time</span>
+                <span class="name">Type: Part-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -139,13 +164,13 @@
                 <br /><br />
                 <span class="name">Company: CreativeLab</span>
                 <br />
-                <span class="name">Location: Bengaluru</span>
+                <span class="name">Location: Bengalore</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Full-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -159,11 +184,11 @@
                 <br />
                 <span class="name">Location: Remote</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Part-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -177,11 +202,11 @@
                 <br />
                 <span class="name">Location: Delhi</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Internship</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -196,11 +221,11 @@
                 <br />
                 <span class="name">Location: Remote</span>
                 <br />
-                <span class="name">Type: Job</span>
+                <span class="name">Type: Full-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -215,11 +240,11 @@
                 <br />
                 <span class="name">Location: Banglore</span>
                 <br />
-                <span class="name">Type: Full-Time</span>
+                <span class="name">Type: Internship</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -234,11 +259,11 @@
                 <br />
                 <span class="name">Location: Mumbai </span>
                 <br />
-                <span class="name">Type: Job</span>
+                <span class="name">Type: Part-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -247,17 +272,17 @@
                 class="image" />
 
             <div class="sub-container">
-                <span class="job-title"> Data Analyst</span>
+                <span class="job-title"> Software Developer</span>
                 <br /><br />
                 <span class="name">Company: COGNIZANT</span>
                 <br />
                 <span class="name">Location: Remote</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Full-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -272,11 +297,11 @@
                 <br />
                 <span class="name">Location: Mumbai</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Internship</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -285,17 +310,17 @@
                 class="image" />
 
             <div class="sub-container">
-                <span class="job-title"> CodeWorks</span>
+                <span class="job-title"> Software Developer</span>
                 <br /><br />
                 <span class="name">Company: Tech Mahindra Americas</span>
                 <br />
                 <span class="name">Location: Remote</span>
                 <br />
-                <span class="name">Type: Internship/Full-Time</span>
+                <span class="name">Type: Part-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -304,17 +329,17 @@
                 class="image" />
 
             <div class="sub-container">
-                <span class="job-title"> Data Analyst</span>
+                <span class="job-title"> Software Developer</span>
                 <br /><br />
                 <span class="name">Company: HCLTech</span>
                 <br />
                 <span class="name">Location: Banglore</span>
                 <br />
-                <span class="name"> Type: Internship/Full-Time</span>
+                <span class="name"> Type: Internship</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
 
@@ -329,17 +354,18 @@
                 <br />
                 <span class="name">Location: Delhi</span>
                 <br />
-                <span class="name"> Type: Internship/Full-Time</span>
+                <span class="name"> Type: Full-Time</span>
                 <br />
                 <span class="name">Posted Date : 8/3/2026</span>
                 <br /><br />
-                <button class="view">View Details</button>
+                <button class="view" onclick="showjob()">View Details</button>
             </div>
         </div>
     </div>
 
     <footer>
         <div class="footer-container">
+
             <div class="footer-box">
                 <div>
                     <img src="./../images/job portal.png" alt="internship portal " height="70px"
@@ -350,8 +376,9 @@
                     InternHub is an online internship and job portal where students and
                     professionals can find internships, full-time jobs and career opportunities.
                 </p>
-
+                </p>
             </div>
+
             <div class="footer-box">
                 <span class="quick-links" class="footer-heading">
                     <img src="./../images/link.jpg" />
@@ -363,7 +390,6 @@
                     <li><a href="./job-details.html">Jobs Details</a></li>
                     <li><a href="./dashboard.html">Dashboard</a></li>
                     <li><a href="./post-job.html">Post Job</a></li>
-                    <li><a href="./register.html">Register</a></li>
                     <li><a href="./login.html">Login</a></li>
                 </ul>
             </div>
@@ -374,13 +400,13 @@
                     <img src="./../images/operator.jpg" style="margin-bottom: 20px;" />
                     <h1 class="footer-heading">Contact Us / Help</h1>
                 </span>
-                <a href="mailto:internship-portal@gail.com"><img src="./../images/gmail.png" alt="smart shop logo"
-                        class="footer-icon" /> internshipportal@gail.com</a><br><br>
-                <a href="tel:+1234567890"><img src="./../images/call.png" class="footer-icon" /> +1234567890</a>
+                <a href="mailto:internship-portal@gail.com"><img src="./../images/gmail.png" class="footer-icon" />
+                    <span class="gmail">internship-portal@gmail.com</span></a><br><br>
+                <a href="tel:+1234567890"><img src="./../images/phone-call.jpg" class="footer-icon" /> +1234567890</a>
                 <br><br>
                 <a href="https://maps.app.goo.gl/zPiDvcTGdPBpPLQr6" target="_blank" class="footer-link">
-                    <img src="./../images/map.png" alt="location icon" class="footer-icon" />
-                    <span>Trinity Tower, ST Colony, Nashik, Maharashtra 422013</span>
+                    <img src="./../images/location.jpg" alt="location icon" class="footer-icon" />
+                    <span> Trinity Tower,ST Colony, Nashik, Maharashtra 422013</span>
                 </a>
 
             </div>
@@ -391,22 +417,22 @@
                     <h1 class="footer-heading">follow Us</h1><br>
                 </span>
 
-                <a href="https://www.facebook.com/" target="_blank"><img src="./../images/facebook.png" alt="Facebook"
+                <a href="https://www.facebook.com/" target="_blank"><img src="./../images/facebook.jpg" alt="Facebook"
                         class="footer-icon" />FaceBook</a><br><br>
-                <a href=" https://www.instagram.com/internshipportal/" target="_blank"><img
+                <a href="https://www.instagram.com/internshipportal/" target="_blank"><img
                         src="./../images/instagram.png" alt="Instagram" class="footer-icon" />Instagram</a><br><br>
-                <a href="https://x.com/home" target="_blank"><img src="./../images/Twitter.png" alt="Twitter"
+                <a href="https://x.com/home" target="_blank"><img src="./../images/twitter.png" alt="Twitter"
                         class="footer-icon" />Twitter</a><br><br>
             </div>
 
         </div>
 
         <hr>
-        <hr>
-
-        <p style="text-align:center; margin-top:20px;">&copy; 2026 internship-portal. All rights reserved.</p>
-    </footer>
-    <script src="./../js/jobs.js"></script>
+        <div class="footer-message">
+            <p> 2026 internship-portal. All rights reserved.</p>
+        </div>
+        <script src="./../js/jobs.js"></script>
+        <script src="./../js/navbar.js"></script>
 </body>
 
 </html>
