@@ -51,6 +51,33 @@ function showDetails(){
 alert("Opening Job Details...");
 window.location.href="job-details.html";
 }
+
+function viewDetails(job){
+
+localStorage.setItem("selectedJob", job);
+
+window.location.href="job-details.html";
+
+}
+let job = localStorage.getItem("selectedJob");
+
+if(job === "frontend"){
+
+document.getElementById("jobTitle").innerHTML="Frontend Developer";
+document.getElementById("company").innerHTML="Company: Capgemini";
+document.getElementById("location").innerHTML="Location: Remote";
+document.getElementById("salary").innerHTML="Salary: ₹5 LPA";
+
+}
+
+else if(job === "backend"){
+
+document.getElementById("jobTitle").innerHTML="Backend Developer";
+document.getElementById("company").innerHTML="Company: TCS";
+document.getElementById("location").innerHTML="Location: Bangalore";
+document.getElementById("salary").innerHTML="Salary: ₹6 LPA";
+
+}
 function applyJob(){
 
 alert("Application Submitted Successfully!");
