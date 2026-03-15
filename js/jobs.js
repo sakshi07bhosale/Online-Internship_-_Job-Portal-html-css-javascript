@@ -7,28 +7,42 @@ function searchJobs() {
 
     for (let i = 0; i < cards.length; i++) {
 
-        let jobTitle = cards[i].querySelector(".job-title").innerText.toLowerCase();
-        let location = cards[i].innerText.toLowerCase();
+        let text = cards[i].innerText.toLowerCase();
 
-        if (jobTitle.includes(jobInput) && location.includes(locationInput)) {
-            cards[i].style.display = "block";
-        } 
+        if (text.includes(jobInput) && text.includes(locationInput)) {
+            cards[i].style.display = "";
+        }
         else {
             cards[i].style.display = "none";
         }
+
     }
+
 }
 
-const toggleBtn = document.getElementById("themeToggle");
-
-toggleBtn.onclick = function () {
-
-    document.body.classList.toggle("dark");
-
-    if(document.body.classList.contains("dark")){
-        toggleBtn.innerHTML = "☀️";
-    }
-    else{
-        toggleBtn.innerHTML = "🌙";
-    }
+function showjob() {
+    window.location.href = "job-details.html";
 }
+
+function viewJob(button) {
+
+    let card = button.closest(".card");
+
+    let title = card.querySelector(".job-title").innerText;
+
+    localStorage.setItem("jobTitle", title);
+
+    window.location.href = "job-details.html";
+
+}
+let cards = document.querySelectorAll(".card");
+
+cards.forEach(function (card) {
+
+    card.addEventListener("click", function () {
+
+        card.style.border = "2px solid blue";
+
+    });
+
+});
