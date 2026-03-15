@@ -144,12 +144,13 @@ input, textarea, select {
 
 button {
     padding: 10px 15px;
-    background: white;;
+    background: rgb(127, 185, 210);;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
+
 
 .job-card {
     background: white;
